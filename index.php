@@ -12,6 +12,7 @@ $user = new User("tapas", "tapas@example.com");
 
 
 //example code for Credit Card Payment
+//to check other payment methods, just pass it into payment service class
 $paymentService = new PaymentService(
     new CreditCardPaymentProvider(),
     100,
