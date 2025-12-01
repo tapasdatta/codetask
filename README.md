@@ -5,7 +5,7 @@
 ### Clone and Navigate to Project
 
 ```bash
-git clone
+git clone "https://github.com/tapasdatta/codetask" git@github.com:tapasdatta/codetask.git
 cd codetask
 ```
 
