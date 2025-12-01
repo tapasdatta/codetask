@@ -4,7 +4,7 @@
 
 require_once 'vendor/autoload.php';
 
-use App\Services\CreditCardPaymentProvider;
+use App\Providers\CreditCardPaymentProvider;
 use App\Services\PaymentService;
 use App\User\User;
 
@@ -12,9 +12,9 @@ use App\User\User;
 $user = new User("tapas", "tapas@example.com");
 
 $paymentService = new PaymentService(
-    new CreditCardPaymentProvider(),
-    100,
-    $user
+    new CreditCardPaymentProvider(), //payment method
+    100, //amount
+    $user //username and email
 );
 
 try {
