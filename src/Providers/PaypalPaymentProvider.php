@@ -21,6 +21,6 @@ class PayPalPaymentProvider extends BasePaymentService
         $userEmail = urlencode($user->getEmail());
         $formattedAmount = number_format($amount, 2, '.', '');
 
-        return "http://partseurope.info/tesQng-paypal/{$userEmail}/{$formattedAmount}";
+        return "https://partseurope.info/testing-paypal/{$userEmail}/{$formattedAmount}";
     }
 }

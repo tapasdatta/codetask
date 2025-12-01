@@ -15,7 +15,7 @@ class PaymentService
         //
     }
 
-    public function process()
+    public function execute()
     {
         return $this->payment->charge(
             $this->amount,

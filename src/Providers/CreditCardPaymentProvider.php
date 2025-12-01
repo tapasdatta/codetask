@@ -20,6 +20,6 @@ class CreditCardPaymentProvider extends BasePaymentService
         $username = urlencode($user->getUsername());
         $formattedAmount = number_format($amount, 2, '.', '');
 
-        return "https://partseurope.info/testing-creditcard/{$username}/{$formattedAmount}";
+        return "https://partseurope.info/testing-credit-card/{$username}/{$formattedAmount}";
     }
 }

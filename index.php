@@ -8,18 +8,18 @@ use App\Providers\CreditCardPaymentProvider;
 use App\Services\PaymentService;
 use App\User\User;
 
-// Create a test user
 $user = new User("tapas", "tapas@example.com");
 
+
+//example code for Credit Card Payment
 $paymentService = new PaymentService(
-    new CreditCardPaymentProvider(), //payment method
-    100, //amount
+    new CreditCardPaymentProvider(),
+    100,
     $user //username and email
 );
 
 try {
-    // Process payment for 
-    $result = $paymentService->process();
+    $result = $paymentService->execute();
 
     echo "Payment processed successfully:\n";
     echo "Total Amount: $" . $result['totalAmount'] . "\n";
