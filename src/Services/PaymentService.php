@@ -1,10 +1,8 @@
 <?php
 
-namespace App;
+namespace App\Services;
 
-use App\PaymentProviderInterface;
-use App\User;
-
+use App\User\User;
 
 class PaymentService
 {
@@ -16,7 +14,7 @@ class PaymentService
         //
     }
 
-    public function pay()
+    public function process()
     {
         return $this->payment->charge(
             $this->amount,
