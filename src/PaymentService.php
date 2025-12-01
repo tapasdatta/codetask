@@ -6,7 +6,7 @@ use App\PaymentProviderInterface;
 use App\User;
 
 
-class Payment
+class PaymentService
 {
     public function __construct(
         private PaymentProviderInterface $payment,
