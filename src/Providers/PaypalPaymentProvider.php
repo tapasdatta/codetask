@@ -1,6 +1,7 @@
 <?php
 
-namespace App\Services;
+namespace App\Providers;
+
 
 use App\User\User;
 

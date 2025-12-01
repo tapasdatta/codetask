@@ -2,6 +2,7 @@
 
 namespace App\Services;
 
+use App\Providers\PaymentProviderInterface;
 use App\User\User;
 
 class PaymentService
