@@ -17,7 +17,9 @@ services:
   payment-service-test:
     build:
       context: .
-      dockerfile: Dockerfile.test
+      dockerfile: Dockerfile
+      args:
+        INSTALL_DEV: "true"
     container_name: php-payment-service-test
     volumes:
       - .:/app
@@ -33,6 +35,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      args:
+        INSTALL_DEV: "true"
     container_name: php-payment-service-dev
     volumes:
       - .:/app

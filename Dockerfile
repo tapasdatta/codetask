@@ -16,7 +16,13 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 COPY composer.json composer.lock* ./
 
 # Install PHP dependencies
-RUN composer install --no-dev --optimize-autoloader
+# Use ARG to allow different install modes
+ARG INSTALL_DEV=false
+RUN if [ "$INSTALL_DEV" = "true" ]; then \
+        composer install --optimize-autoloader; \
+    else \
+        composer install --no-dev --optimize-autoloader; \
+    fi
 
 # Copy application code
 COPY . .
